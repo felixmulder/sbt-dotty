@@ -13,6 +13,8 @@ standard structure:
 └── src
 ```
 
+Please see the [example](https://github.com/felixmulder/sbt-dotty/tree/master/example) project.
+
 
 build.sbt
 ---------
