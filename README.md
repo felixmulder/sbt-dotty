@@ -42,6 +42,6 @@ Troubleshooting
 
 * **P:** I'm getting unresolved dependency errors.
 
-  **A:** You've probably set `scalaVersion` in your `build.sbt` file. Don't do
-         this, dotty's version number starts with `0.1` for now, as such that is the
-         version that needs to be set.
+  **A:** You've probably set `scalaVersion` in your `build.sbt` file. The
+  plugin takes care of setting the correct `scalaVersion` so please don't
+  overwrite this.
