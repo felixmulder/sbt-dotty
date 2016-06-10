@@ -9,4 +9,4 @@ branches:
     - master
 
 script:
-    - sbt ";compile;run"
+    - (cd example && sbt ";compile;run")
