@@ -1,6 +1,8 @@
 sbt-dotty
 =========
 
+[![Build Status](https://travis-ci.org/felixmulder/sbt-dotty.svg?branch=master)](https://travis-ci.org/felixmulder/sbt-dotty)
+
 This plugin allows you to easily create an sbt dotty project using the
 standard structure:
 

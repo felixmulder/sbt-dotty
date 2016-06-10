@@ -1,0 +1,12 @@
+language: scala
+
+jdk:
+    - oraclejdk8
+
+
+branches:
+    only:
+    - master
+
+script:
+    - sbt ";compile;run"
