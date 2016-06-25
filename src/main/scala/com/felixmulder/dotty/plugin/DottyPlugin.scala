@@ -7,13 +7,12 @@ object DottyPlugin extends AutoPlugin {
   override def requires: Plugins = plugins.JvmPlugin
 
   override def projectSettings: Seq[Setting[_]] = {
-    val releaseId          = "20160610-42030aa-SNAPSHOT"
-    val dottyVersion       = "0.1"
-    val dottyBridgeVersion = "0.1.1-SNAPSHOT-20160609-8fe3e37"
+    val dottyVersion       = "0.1-SNAPSHOT"
+    val dottyBridgeVersion = "0.1.1-SNAPSHOT-20160609-8fe3e37" // has to be the release to find sources
 
     Seq(
       // Dotty version
-      scalaVersion := s"$dottyVersion-$releaseId",
+      scalaVersion := dottyVersion,
       scalaOrganization := "ch.epfl.lamp",
 
       // Using "-language:Scala2" for convenience when modifying a library for dotty
@@ -32,10 +31,10 @@ object DottyPlugin extends AutoPlugin {
 
       libraryDependencies ++= Seq(
         // Dotty depends on stdlib 2.11.5, best use that too
-        "org.scala-lang" % "scala-library" % "2.11.5",
+        "ch.epfl.lamp" % "scala-library_2.11" % dottyVersion,
 
         // Compiler on tool path
-        "ch.epfl.lamp" % "dotty_2.11" % s"$dottyVersion-$releaseId" % "scala-tool"
+        "ch.epfl.lamp" % "dotty_2.11" % dottyVersion % "scala-tool"
       ),
 
       // Bridge which allows REPL and compilation via dotty
