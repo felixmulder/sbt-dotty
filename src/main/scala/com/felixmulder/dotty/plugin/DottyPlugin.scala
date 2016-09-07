@@ -7,8 +7,8 @@ object DottyPlugin extends AutoPlugin {
   override def requires: Plugins = plugins.JvmPlugin
 
   override def projectSettings: Seq[Setting[_]] = {
-    val dottyVersion       = "0.1-SNAPSHOT"
-    val dottyBridgeVersion = "0.1.1-SNAPSHOT-20160609-8fe3e37" // has to be the release to find sources
+    val dottyVersion       = "0.1-20160906-75f4400-NIGHTLY"
+    val dottyBridgeVersion = "0.1.1-20160906-75f4400-NIGHTLY"
 
     Seq(
       // Dotty version
@@ -25,9 +25,6 @@ object DottyPlugin extends AutoPlugin {
 
       // Don't import the stdlib for "scalaBinaryVersion"
       autoScalaLibrary := false,
-
-      // Add resolver for Sonatype Snapshots
-      resolvers += Resolver.sonatypeRepo("snapshots"),
 
       libraryDependencies ++= Seq(
         // Dotty depends on stdlib 2.11.5, best use that too
