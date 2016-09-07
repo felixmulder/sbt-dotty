@@ -38,7 +38,7 @@ plugins.sbt
 -----------
 
 ```
-addSbtPlugin("com.felixmulder" % "sbt-dotty" % "0.1.1")
+addSbtPlugin("com.felixmulder" % "sbt-dotty" % "0.1.2")
 ```
 
 Troubleshooting
