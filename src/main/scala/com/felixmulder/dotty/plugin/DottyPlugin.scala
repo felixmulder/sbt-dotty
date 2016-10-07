@@ -19,9 +19,6 @@ object DottyPlugin extends AutoPlugin {
       scalaVersion := dottyVersion,
       scalaOrganization := "ch.epfl.lamp",
 
-      // Using "-language:Scala2" for convenience when modifying a library for dotty
-      scalacOptions ++= Seq("-language:Scala2"),
-
       // Dotty is compatible with Scala 2.11, as such you can use 2.11
       // binaries. However, when publishing - this version number should be set
       // to 0.1 (the dotty version number)
