@@ -49,7 +49,7 @@ sbt.version=0.13.11
 plugins.sbt
 -----------
 ```
-addSbtPlugin("com.felixmulder" % "sbt-dotty" % "0.1.4")
+addSbtPlugin("com.felixmulder" % "sbt-dotty" % "0.1.5")
 ```
 
 Troubleshooting
