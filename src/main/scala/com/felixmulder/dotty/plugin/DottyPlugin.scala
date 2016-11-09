@@ -8,10 +8,10 @@ object DottyPlugin extends AutoPlugin {
 
   override def projectSettings: Seq[Setting[_]] = {
     val dottyVersion = sys.env.get("COMPILERVERSION") getOrElse {
-      "0.1-20160906-75f4400-NIGHTLY"
+      "0.1-20161108-cf92c40-NIGHTLY"
     }
     val dottyBridgeVersion = sys.env.get("BRIDGEVERSION") getOrElse {
-      "0.1.1-20160906-75f4400-NIGHTLY"
+      "0.1.1-20161108-cf92c40-NIGHTLY"
     }
 
     Seq(
