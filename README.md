@@ -34,7 +34,11 @@ out with the compatibility mode by adding
 scalacOptions ++= Seq("-language:Scala2")
 ```
 
-to `build.sbt`.
+to `build.sbt`, note that this affects typechecking and thus may prevent some
+valid Dotty code from compiling.
+
+A tool to port code from Scala 2.x to Dotty is currently in development at
+https://github.com/scalacenter/scalafix
 
 build.properties
 ----------------
