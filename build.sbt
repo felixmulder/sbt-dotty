@@ -3,13 +3,14 @@ import sbt._
 
 lazy val root = (project in file("."))
   .settings(commonSettings ++ publishingSettings)
+  
 
 lazy val commonSettings = Seq(
   organization := "com.felixmulder",
   name := "sbt-dotty",
   version := "0.1.5",
   scalacOptions ++= Seq("-feature", "-deprecation", "-encoding", "utf8"),
-  scalaVersion := "2.10.4",
+  scalaVersion := "2.10.6",
   sbtPlugin := true
 )
 
@@ -34,14 +35,10 @@ lazy val publishingSettings = Seq(
       "scm:git:git@github.com:felixmulder/sbt-dotty.git"
     )
   ),
-  pomExtra := (
-    <developers>
-      <developer>
-        <id>felixmulder</id>
-        <name>Felix Mulder</name>
-        <email>felix.mulder@gmail.com</email>
-        <url>http://felixmulder.com</url>
-      </developer>
-    </developers>
+  developers += Developer(
+    id = "felixmulder",
+    name = "Felix Mulder",
+    email = "felix.mulder@gmail.com",
+    url = url("http://felixmulder.com")
   )
 )
