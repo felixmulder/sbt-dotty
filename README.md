@@ -10,7 +10,7 @@ standard structure:
 .
 ├── build.sbt
 ├── project
-│   ├── build.properties
+│   ├── build.properties
 │   └── plugins.sbt
 └── src
 ```
@@ -49,7 +49,7 @@ sbt.version=0.13.11
 plugins.sbt
 -----------
 ```
-addSbtPlugin("com.felixmulder" % "sbt-dotty" % "0.1.5")
+addSbtPlugin("com.felixmulder" % "sbt-dotty" % "0.1.6")
 ```
 
 Troubleshooting
