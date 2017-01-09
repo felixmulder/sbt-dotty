@@ -1,1 +1,1 @@
-addSbtPlugin("com.felixmulder" % "sbt-dotty" % "0.1.5")
+addSbtPlugin("com.felixmulder" % "sbt-dotty" % "0.1.6")

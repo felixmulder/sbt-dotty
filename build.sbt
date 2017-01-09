@@ -3,12 +3,12 @@ import sbt._
 
 lazy val root = (project in file("."))
   .settings(commonSettings ++ publishingSettings)
-  
+
 
 lazy val commonSettings = Seq(
   organization := "com.felixmulder",
   name := "sbt-dotty",
-  version := "0.1.5",
+  version := "0.1.6",
   scalacOptions ++= Seq("-feature", "-deprecation", "-encoding", "utf8"),
   scalaVersion := "2.10.6",
   sbtPlugin := true
