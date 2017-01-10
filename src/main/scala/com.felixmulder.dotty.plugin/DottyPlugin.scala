@@ -9,11 +9,7 @@ object DottyPlugin extends AutoPlugin {
   override def projectSettings: Seq[Setting[_]] = {
     
     val dottyVersion = sys.env.get("COMPILERVERSION") getOrElse {
-      "0.1-20170107-a909c2f-NIGHTLY"
-    }
-
-    val dottyBridgeVersion = sys.env.get("BRIDGEVERSION") getOrElse {
-      "0.1.1-20170107-a909c2f-NIGHTLY"
+      "0.1.1-20170109-be64643-NIGHTLY"
     }
 
     Seq(
@@ -32,7 +28,7 @@ object DottyPlugin extends AutoPlugin {
       ),
 
       // Bridge which allows REPL and compilation via dotty
-      scalaCompilerBridgeSource := ("ch.epfl.lamp" % "dotty-sbt-bridge" % dottyBridgeVersion % "component").sources()
+      scalaCompilerBridgeSource := ("ch.epfl.lamp" % "dotty-sbt-bridge" % scalaVersion.value % "component").sources()
     )
   }
 }
