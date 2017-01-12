@@ -8,8 +8,9 @@ object DottyPlugin extends AutoPlugin {
 
   override def projectSettings: Seq[Setting[_]] = {
     
+    // http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22ch.epfl.lamp%22%20dotty
     val dottyVersion = sys.env.get("COMPILERVERSION") getOrElse {
-      "0.1.1-20170109-be64643-NIGHTLY"
+      "0.1.1-20170111-ba7e129-NIGHTLY"
     }
 
     Seq(
@@ -22,10 +23,12 @@ object DottyPlugin extends AutoPlugin {
       // to 0.1 (the dotty version number)
       scalaBinaryVersion := "2.11",
 
-      libraryDependencies ++= Seq(
-        // Compiler on tool path
-        "ch.epfl.lamp" % "dotty_2.11" % dottyVersion % "scala-tool"
-      ),
+      // bug in sbt 0.13.13: https://github.com/sbt/sbt/issues/2867
+      // should be fixed in 0.13.14
+      ivyScala ~= (_ map (_ copy (overrideScalaVersion = false))),
+
+      // Compiler on tool path
+      libraryDependencies += "ch.epfl.lamp" % "dotty_2.11" % dottyVersion % "scala-tool",
 
       // Bridge which allows REPL and compilation via dotty
       scalaCompilerBridgeSource := ("ch.epfl.lamp" % "dotty-sbt-bridge" % scalaVersion.value % "component").sources()
