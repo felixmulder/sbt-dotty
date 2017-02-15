@@ -44,13 +44,13 @@ https://github.com/scalacenter/scalafix
 build.properties
 ----------------
 ```
-sbt.version=0.13.11
+sbt.version=0.13.13
 ```
 
 plugins.sbt
 -----------
 ```
-addSbtPlugin("com.felixmulder" % "sbt-dotty" % "0.1.7")
+addSbtPlugin("com.felixmulder" % "sbt-dotty" % "0.1.9")
 ```
 
 Troubleshooting
