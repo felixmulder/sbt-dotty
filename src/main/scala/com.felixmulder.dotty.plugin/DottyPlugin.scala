@@ -10,7 +10,7 @@ object DottyPlugin extends AutoPlugin {
     
     // http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22ch.epfl.lamp%22%20dotty
     val dottyVersion = sys.env.get("COMPILERVERSION") getOrElse {
-      "0.1.1-20170111-ba7e129-NIGHTLY"
+      "0.1.1-20170214-606e36b-NIGHTLY"
     }
 
     Seq(
@@ -28,7 +28,7 @@ object DottyPlugin extends AutoPlugin {
       ivyScala ~= (_ map (_ copy (overrideScalaVersion = false))),
 
       // Compiler on tool path
-      libraryDependencies += "ch.epfl.lamp" % "dotty_2.11" % dottyVersion % "scala-tool",
+      libraryDependencies += "ch.epfl.lamp" % "dotty_2.11" % scalaVersion.value % "scala-tool",
 
       // Bridge which allows REPL and compilation via dotty
       scalaCompilerBridgeSource := ("ch.epfl.lamp" % "dotty-sbt-bridge" % scalaVersion.value % "component").sources()
