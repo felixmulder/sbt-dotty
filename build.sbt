@@ -6,9 +6,9 @@ lazy val root = (project in file("."))
 
 
 lazy val commonSettings = Seq(
-  organization := "com.felixmulder",
+  organization := "ch.epfl.lamp",
   name := "sbt-dotty",
-  version := "0.1.9",
+  version := "0.1.0-RC1",
   scalacOptions ++= Seq("-feature", "-deprecation", "-encoding", "utf8"),
   scalaVersion := "2.10.6",
   sbtPlugin := true
@@ -26,13 +26,13 @@ lazy val publishingSettings = Seq(
       Some("releases"  at nexus + "service/local/staging/deploy/maven2")
   },
   publishArtifact in Test := false,
-  homepage := Some(url("https://github.com/felixmulder/sbt-dotty")),
+  homepage := Some(url("https://github.com/lampepfl/sbt-dotty")),
   licenses += ("BSD New",
-    url("https://github.com/felixmulder/sbt-dotty/blob/master/LICENSE")),
+    url("https://github.com/lampepfl/sbt-dotty/blob/master/LICENSE")),
   scmInfo := Some(
     ScmInfo(
-      url("https://github.com/felixmulder/sbt-dotty"),
-      "scm:git:git@github.com:felixmulder/sbt-dotty.git"
+      url("https://github.com/lampepfl/sbt-dotty"),
+      "scm:git:git@github.com:lampepfl/sbt-dotty.git"
     )
   ),
   developers += Developer(

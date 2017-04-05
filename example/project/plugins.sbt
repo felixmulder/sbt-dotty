@@ -1,1 +1,1 @@
-addSbtPlugin("com.felixmulder" % "sbt-dotty" % "0.1.9")
+addSbtPlugin("ch.epfl.lamp" % "sbt-dotty" % "0.1.0-RC1")
