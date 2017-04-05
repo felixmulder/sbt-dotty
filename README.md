@@ -1,8 +1,8 @@
 sbt-dotty
 =========
 
-[![Build Status](https://travis-ci.org/felixmulder/sbt-dotty.svg?branch=master)](https://travis-ci.org/felixmulder/sbt-dotty)
-[![Maven Central](https://img.shields.io/maven-central/v/com.felixmulder/sbt-dotty.svg)]()
+[![Build Status](https://travis-ci.org/lampepfl/sbt-dotty.svg?branch=master)](https://travis-ci.org/lampepfl/sbt-dotty)
+[![Maven Central](https://img.shields.io/maven-central/v/ch.epfl.lamp/sbt-dotty.svg)]()
 
 This plugin allows you to easily create an sbt dotty project using the
 standard structure:
